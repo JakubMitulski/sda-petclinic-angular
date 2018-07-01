@@ -1,0 +1,21 @@
+<div *ngIf="owner">
+  <h1>Owner details</h1>
+
+  <dl>
+    <dt>Name:</dt>
+    <dd>{{owner.firstname}}</dd>
+    <dt>Lastname:</dt>
+    <dd>{{owner.lastname}}</dd>
+    <dt>Pets:</dt>
+    <dd>
+      <ul>
+        <li *ngFor="let pet of owner.pets">
+          <span>{{pet.name}}</span>
+          <span>{{pet.petType}}</span>
+          <span>{{pet.birthDate}}</span>
+        </li>
+      </ul>
+    </dd>
+  </dl>
+  <button class="btn btn-primary" (click)="onHideClick()">Hide</button>
+</div>

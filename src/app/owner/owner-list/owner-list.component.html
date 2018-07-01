@@ -1,0 +1,25 @@
+<h1>Owners</h1>
+<table class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <td>Imie</td>
+    <td>Nazwisko</td>
+    <td>Adres</td>
+    <td>Operacje</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let owner of owners">
+    <td>{{owner.firstname}}</td>
+    <td>{{owner.lastname}}</td>
+    <td>{{owner.address.country}}, {{owner.address.city}}, {{owner.address.postalcode}}, {{owner.address.street}}</td>
+    <td>
+      <button class="btn btn-default" (click)="onOwnerClicked(owner)">Info</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<app-owner-details [owner]="selectedOwner"></app-owner-details>
+<button (click)="createNewOwner()">Create test user</button>
+
