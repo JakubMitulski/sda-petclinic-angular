@@ -1,0 +1,10 @@
+<div>Login</div>
+<!--todo formularz logowania, dwa pola email+haslo, przycisk login-->
+<form>
+  <label for="email">Email</label>
+  <input id="email" type="text" name="email" [(ngModel)]="loginForm.login">
+
+  <label for="password">Password</label>
+  <input id="password" type="password" [(ngModel)]="loginForm.password" name="password">
+  <button type="button" (click)="sendForm()">Login</button>
+</form>
